@@ -1,8 +1,34 @@
 {
   "name": "reskongoal",
+  "description": "React Web app for managing tasks and project (like Trello)",
   "version": "0.0.1",
   "main": "index.js",
   "repository": "git@github.com:oPauloChaves/reskongoal.git",
   "author": "Paulo Chaves <opaulochaves@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development webpack-dashboard -- webpack-dev-server",
+    "build": "rm -rf ./dist && NODE_ENV=production webpack",
+    "preview": "NODE_ENV=production webpack-dashboard -- webpack-dev-server"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "html-webpack-plugin": "^2.26.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "beta",
+    "webpack-dashboard": "^0.2.1",
+    "webpack-dev-server": "beta"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
 }
