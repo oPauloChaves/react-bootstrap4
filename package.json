@@ -1,0 +1,8 @@
+{
+  "name": "reskongoal",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:oPauloChaves/reskongoal.git",
+  "author": "Paulo Chaves <opaulochaves@gmail.com>",
+  "license": "MIT"
+}
