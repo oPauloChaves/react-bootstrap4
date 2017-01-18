@@ -1,20 +1,26 @@
 import React from 'react'
-import { render } from 'react-dom'
+import ReactDOM from 'react-dom'
 
-import webpackImg from './assets/img/webpack2.png'
-import "./app.scss"
+import { AppContainer } from 'react-hot-loader';
+// AppContainer is a necessary wrapper component for HMR
 
-const App = () => (
-  <div className="page">
-    <h1>Webpack 2 is Awesome!!!</h1>
+import App from './components/App'
 
-    <h3>Import image within the JS file</h3>
-    <img src={ webpackImg } alt="" className="img-exaple"/>
-    <button className="btn btn-primary">Button</button>
-  </div>
-)
+const render = (Component) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component/>
+    </AppContainer>,
+    document.getElementById('root')
+  );
+};
 
-render(
-  <App />,
-  document.getElementById('root')
-)
+render(App);
+
+// Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    const NewApp = require('./components/App').default
+    render(NewApp)
+  });
+}
