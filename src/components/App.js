@@ -1,13 +1,15 @@
 import React from 'react';
 
-import styles from './App.scss';
-import webpackimg from '../assets/img/webpack2.png'
+import '../scss/app.scss';
+import Header from './Header';
+import PageContent from './PageContent';
+import Footer from './Footer';
 
 const App = () => (
-  <div className={styles.app}>
-    <h2>Hello, Paulo Chaves!</h2>
-    <br />
-    <img src={ webpackimg } alt="Webpack 2 logo" />
+  <div>
+    <Header />
+    <PageContent />
+    <Footer />
   </div>
 );
 
