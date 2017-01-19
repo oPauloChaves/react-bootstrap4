@@ -1,13 +1,22 @@
 // https://github.com/yannickcr/eslint-plugin-react/issues/447
 {
-  "extends": "airbnb-base",
+  "extends": "airbnb",
   "plugins": [
     "react"
   ],
+  "env": {
+    "es6": true,
+    "browser": true
+  },
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
-      "modules": true
+      "modules": true,
+      "defaultParams": true
     }
+  },
+  "rules": {
+    "react/jsx-filename-extension": 0, // A .jsx extension is not required for files containing jsx.
+    "global-require": 0 // We use global requires in various places, e.g. code splitting instances.
   }
 }
