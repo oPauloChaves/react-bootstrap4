@@ -1,0 +1,13 @@
+// https://github.com/yannickcr/eslint-plugin-react/issues/447
+{
+  "extends": "airbnb-base",
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  }
+}
